@@ -1,46 +1,68 @@
-# 714. Best Time to Buy and Sell Stock with Transaction Fee
+---
+description: BFS
+---
 
-[https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+# 133. Clone Graph
+
+{% embed url="https://leetcode.com/problems/clone-graph" %}
 
 ```java
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public List<Node> neighbors;
+    public Node() {
+        val = 0;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val) {
+        val = _val;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val, ArrayList<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+}
+*/
+
 class Solution {
-    public int maxProfit(int[] prices, int fee) 
+    public Node cloneGraph(Node node) 
     {
-        // Greedy
-        int min = prices[0];
-        int sum = 0;
-        for (int p: prices)
+        if (node == null)
         {
-            // 为什么p 《 min:
-            // [1,3,2]:
-            // 如果没有这个条件，我们所取的就不是最小的min
-            // p比我们目前的min还小，说明该买入了
-            if (p < min && p < min+fee)
+            return null;
+        }
+        Map<Integer,Node> map = new HashMap<Integer,Node>();
+        Node ans = new Node();
+
+        map.put(node.val,new Node(node.val));
+        Queue<Node> q = new LinkedList<Node>();
+        q.add(node);
+        while (!q.isEmpty())
+        {
+            Node temp = q.poll();
+            for (Node c: temp.neighbors)
             {
-                min = p;
-            }
-            // 我们实际上是买入了这个股票握在手里，
-            // 在遇到if满足的时候才卖
-            // 但如果跑完了loop就说明我们在这个p卖掉了
-            else if (p > min+fee)
-            {
-                sum += p-min-fee;
-                // 因为是持有/也可以算卖掉，而且我们count了净利润，这个
-                // min是要减掉fee的，因为我们在if statement里面是没算
-                // transaction fee
-                
-                // 这个时候其实我们就是要找比这个小的p接盘
-                min = p-fee;
+                if (!map.containsKey(c.val))
+                {
+                    map.put(c.val, new Node(c.val));
+                    q.add(c);
+                }
+                map.get(temp.val).neighbors.add(map.get(c.val));
             }
         }
-        return sum;
-        }
+        return map.get(node.val); 
     }
 }
 ```
 
-* 这道题一开始加了 fee，是因为交易一次收fee可以在结尾收，也可以在开头收。我们直接假定1是最小的价格开始收钱。
-* 如果 p+fee < res:
-  * 该买入了，也就是说我们卖掉了之前持有的股票
-* 如果 p > res:
-  *
+* deep copy, graph主要是做了一次BFS
+* 我们用map来标记到底有没有遍历过这个node
+  * 如果是二叉树就没这个问题，因为二叉树是 directed
+* 图片 example
+
+![](.gitbook/assets/Page1.jpg)
+
+![](.gitbook/assets/Page2.jpg)
