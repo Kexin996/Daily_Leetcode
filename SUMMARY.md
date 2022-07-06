@@ -8,4 +8,4 @@
 * [424. Longest Repeating Character Replacement](424.-longest-repeating-character-replacement.md)
 * [1493. Longest Subarray of 1's After Deleting One Element](1493.-longest-subarray-of-1s-after-deleting-one-element.md)
 * [209. Minimum Size Subarray Sum](209.-minimum-size-subarray-sum.md)
-* [Page 1](page-1.md)
+* [1248. Count Number of Nice Subarrays](1248.-count-number-of-nice-subarrays.md)
