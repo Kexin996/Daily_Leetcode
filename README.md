@@ -1,4 +1,2 @@
----
-Just the code for Leetcode :)
----
+# Page 1
 
