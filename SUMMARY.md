@@ -5,3 +5,4 @@
 * [2269. Find the K-Beauty of a Number](2269.-find-the-k-beauty-of-a-number.md)
 * [1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](1343.-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.md)
 * [1004. Max Consecutive Ones III](1004.-max-consecutive-ones-iii.md)
+* [424. Longest Repeating Character Replacement](424.-longest-repeating-character-replacement.md)
