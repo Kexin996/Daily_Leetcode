@@ -9,3 +9,4 @@
 * [1493. Longest Subarray of 1's After Deleting One Element](1493.-longest-subarray-of-1s-after-deleting-one-element.md)
 * [209. Minimum Size Subarray Sum](209.-minimum-size-subarray-sum.md)
 * [1248. Count Number of Nice Subarrays](1248.-count-number-of-nice-subarrays.md)
+* [992. Subarrays with K Different Integers](992.-subarrays-with-k-different-integers.md)
