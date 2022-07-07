@@ -2,43 +2,30 @@
 
 ## PROBLEM
 
-{% embed url="https://leetcode.com/problems/count-number-of-nice-subarrays/" %}
+{% embed url="https://leetcode.com/problems/fruit-into-baskets/" %}
 
 ```java
 class Solution {
-    public int numberOfSubarrays(int[] nums, int k) 
+    public int totalFruit(int[] fruits) 
     {
-        int start = 0, end = 0, count = 0,ans = 0; 
-        // count is the subarrays containing exact k odd numbers in the window
-        while (end < nums.length)
+        int start = 0, end = 0,ans = 0;
+        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+        while (end < fruits.length)
         {
-            if (nums[end] % 2 == 1)
+            map.put(fruits[end],map.getOrDefault(fruits[end],0)+1);
+            // we can actually directly check the map size
+            while (map.size() > 2)
             {
-                k--;
-                // this will be useful when we enter the while loop
-                // this condition is useful when it is 
-                // triggered after we get the first
-                // subarrays with k odd numbers
-                // that means we need to shrink the window
-                // so count = 0
-                count = 0;
-            }
-            // at most ---> k will == 0
-            // it will never be negative
-            while ( k == 0)
-            {
-                if (nums[start] %2 == 1)
-                {
-                    k++;
-                }
+                map.put(fruits[start],map.get(fruits[start])-1);
+                // if fruits[start].value == 0,
+                // we remove it
+                map.remove(fruits[start],0);
                 start++;
-                count++;
-                // the count is used to record all the possible previous subarrays
             }
-            // if count is not 0
-            // it is like we just extend each available subarray by 1
-            ans += count;  
             end++;
+            // we only use end and start is enough
+            // since they are not weighted
+            ans = Math.max(ans,end-start);
         }
         return ans;
     }
@@ -47,6 +34,7 @@ class Solution {
 
 ## SHORT SUMMARY
 
-* dynamic window size + count + permutation
+* dynamic window size + maximum/minimum + map
+* the condition for shrinking the window: the number of types of fruits > 2
 * TC: O(2n) ---> O(n)
-* SC: O(1)
+* SC: O(1) (the problem only allows keeping two keys)
