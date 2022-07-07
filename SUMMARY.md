@@ -10,3 +10,4 @@
 * [209. Minimum Size Subarray Sum](209.-minimum-size-subarray-sum.md)
 * [1248. Count Number of Nice Subarrays](1248.-count-number-of-nice-subarrays.md)
 * [992. Subarrays with K Different Integers](992.-subarrays-with-k-different-integers.md)
+* [1234. Replace the Substring for Balanced String](1234.-replace-the-substring-for-balanced-string.md)
