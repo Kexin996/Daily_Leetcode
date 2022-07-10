@@ -12,4 +12,4 @@
 * [992. Subarrays with K Different Integers](992.-subarrays-with-k-different-integers.md)
 * [1234. Replace the Substring for Balanced String](1234.-replace-the-substring-for-balanced-string.md)
 * [930. Binary Subarrays With Sum](930.-binary-subarrays-with-sum.md)
-* [Page 1](page-1.md)
+* [904. Fruit Into Baskets](904.-fruit-into-baskets.md)
