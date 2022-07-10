@@ -16,3 +16,4 @@
 * [219. Contains Duplicate II](219.-contains-duplicate-ii.md)
 * [438. Find All Anagrams in a String](438.-find-all-anagrams-in-a-string.md)
 * [187. Repeated DNA Sequences](187.-repeated-dna-sequences.md)
+* [643. Maximum Average Subarray I](643.-maximum-average-subarray-i.md)
