@@ -13,3 +13,4 @@
 * [1234. Replace the Substring for Balanced String](1234.-replace-the-substring-for-balanced-string.md)
 * [930. Binary Subarrays With Sum](930.-binary-subarrays-with-sum.md)
 * [904. Fruit Into Baskets](904.-fruit-into-baskets.md)
+* [219. Contains Duplicate II](219.-contains-duplicate-ii.md)
