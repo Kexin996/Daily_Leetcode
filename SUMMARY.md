@@ -19,4 +19,4 @@
 * [643. Maximum Average Subarray I](643.-maximum-average-subarray-i.md)
 * [567. Permutation in String](567.-permutation-in-string.md)
 * [713. Subarray Product Less Than K](713.-subarray-product-less-than-k.md)
-* [Page 1](page-1.md)
+* [1358. Number of Substrings Containing All Three Characters](1358.-number-of-substrings-containing-all-three-characters.md)
