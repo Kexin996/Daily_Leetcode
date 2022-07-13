@@ -56,6 +56,6 @@ class Solution {
 ## SHORT SUMMARY
 
 * it is an updated version of the partition in quicksort
-* **!!!!PAY ATTENTION TO THE DEFINITION OF EACH VARIABLE**
+* **!!!!PAT ATTENTION TO THE DEFINITION OF EACH VARIABLE**
 * TC: O(n)
 * SC: O(1)
